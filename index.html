@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #121212;
+    color: whitesmoke;
+}
+
+#wrapper{
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: fixed;
+    background: rgba(247, 2, 2, 0.808);
+}
+
+.container{
+    width: 1300px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding-top: 10px;
+}
+
+header{
+    width: 100%;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px 20px;
+}
+
+nav ul li:hover{
+    background: rgba(255, 0, 0, 0.795);
+    color: white;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+li a{
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover{
+    color: blue;
+
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+
+.container2{
+    width: 1300px;
+    margin: 0 auto;
+    padding: 100px 0px 0px 0px;
+
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.ui-text{
+    font-size: 25px;
+    color: rgba(255, 0, 0, 0.445);
+}
+
+.p1{
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+img{
+    border-radius: 67px;
+}
+
+#about{
+    margin: 5% auto;
+    width: 1300px;
+    padding: 30px;
+    background: rgba(128, 128, 128, 0.103);
+    box-shadow:  0 4px 8px rgba(245, 245, 245, 0.158), 0 2px 4px  rgba(245, 245, 245, 0.158);
+}
+
+.about-me{
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 100px;
+    color:  rgba(255, 0, 0, 0.705);
+}
+
+.p2{
+    font-size: 22px;
+    font-weight: 300;
+}
+
+#interests{
+    margin: 5% auto;
+    width: 1300px;
+    padding: 30px;
+    background: rgba(128, 128, 128, 0.103);
+    box-shadow:  0 4px 8px rgba(245, 245, 245, 0.158), 0 2px 4px  rgba(245, 245, 245, 0.158);
+}
+
+.col-md-4{
+    width: 33.3%;
+    margin: 20px;
+    padding: 10px;
+}
+
+.interests{
+    font-size: 40px;
+    font-weight: bolder;
+    color:  rgba(255, 0, 0, 0.705); 
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.int{
+    padding: 7px 0px;
+    font-size: 30px;
+}
+
+.int-2{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#skills{
+    margin: 5% auto;
+    width: 1300px;
+    padding: 30px;
+    background: rgba(128, 128, 128, 0.103);
+    box-shadow:  0 4px 8px rgba(245, 245, 245, 0.158), 0 2px 4px  rgba(245, 245, 245, 0.158);
+}
+
+.skills{
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 90px;
+    color:  rgba(255, 0, 0, 0.705);
+    margin-left: 400px;
+}
+
+.icon-item {
+    font-size: 30px;
+    color: #b1afaf;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.icon-item i {
+    margin-bottom: 10px;
+}
+
+#education{
+    margin: 5% auto;
+    width: 1300px;
+    padding: 30px;
+    background: rgba(128, 128, 128, 0.103);
+    box-shadow:  0 4px 8px rgba(245, 245, 245, 0.158), 0 2px 4px  rgba(245, 245, 245, 0.158);
+}
+
+.edu{
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 90px;
+    color:  rgba(255, 0, 0, 0.705);
+    margin-left: 400px;
+}
+
+.edu-bgd{
+    font-size: 20px;
+    margin-left: 550px;
+    line-height: 30px;
+    font-weight: bolder;
+}
+
+.gtc{
+    margin-left: 440px;
+    font-weight: lighter;
+}
+
+.download-cv{
+    padding-top: 30px;
+    margin-left: 10px;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color:  rgba(0, 0, 255, 0.103);
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 9px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-left: 500px;
+    box-shadow: 0 4px 8px rgba(245, 245, 245, 0.158), 0 2px 4px  rgba(245, 245, 245, 0.158);
+}
+
+.btn-download:hover {
+    background: lightblue;
+    transition: all 0.5s;
+    color: #0026ff;
+}
+
+
+#projects{
+    margin: 5% auto;
+    width: 1300px;
+    padding: 30px;
+    background: rgba(128, 128, 128, 0.103);
+    box-shadow:  0 4px 8px rgba(245, 245, 245, 0.158), 0 2px 4px  rgba(245, 245, 245, 0.158);
+}
+
+.projects{
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 90px;
+    color:  rgba(255, 0, 0, 0.705);
+    margin-left: 530px;
+}
+
+.p3{
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0px 40px;
+}
+
+.btn-1{
+    padding: 10px;
+    margin: 20px 550px;
+    background: rgba(0, 0, 255, 0.103);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(245, 245, 245, 0.158), 0 2px 4px  rgba(245, 245, 245, 0.158);
+}
+
+.btn-1 a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btn-1:hover{
+    background: lightblue;
+    transition: all 0.5s;
+}
+
+.btn-1 a:hover{
+    color: blue;
+}
+
+#contact{
+    margin: 5% auto;
+    width: 1300px;
+    padding: 30px;
+    background: rgba(128, 128, 128, 0.103);
+    box-shadow:  0 4px 8px rgba(245, 245, 245, 0.158), 0 2px 4px  rgba(245, 245, 245, 0.158);
+}
+
+.contact{
+    font-size: 40px;
+    font-weight: bolder;
+    line-height: 90px;
+    color:  rgba(255, 0, 0, 0.705);
+    margin-left: 500px;
+}
+
+.formgroup {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(255, 0, 0, 0.37);
+    border-radius: 7px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #5C6BC0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width:100%;
+}
+
+.submit-btn:hover {
+    background-color: #3f4e9f;
+}
+
+.alt-1{
+    margin-top: 20px;
+    margin: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 10px;
+    color: white;
+    border-radius: 50px;
+}
+
+.social-btn:hover {
+    background-color: #0026ff;
+    transition: all 0.5 ease-in-out;
+}
+
+.social-btn i {
+    font-size: 35px;
+}
+
+footer{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1em;
+    color: #bbb;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .about-me, .skills, .projects {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .btn-download {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul li {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .btn-download {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .contact .formgroup input, .contact .formgroup textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 1 1 100%;
+    }
+}
+  </style>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <h1>Omegah Chibuikem</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#interests">Interests</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <section id="home">
+        <div class="container2">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="ui-text">UI/UX Developer</h5>
+                    <p class="p1">Hi, I'm Omegah Chibuikem a web developer from Nigeria.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="Images/my first choice.jpg" alt="" width="450px" height="600px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container3">
+            <h2 class="about-me">About Me</h2>
+            <p class="p2">I'm incredibly passionate about web development because it allows me to turn ideas into functional, dynamic experiences on the web. From the moment I first started coding, I was captivated by the endless possibilities of creating something from scratch that people can interact with, learn from, or enjoy. Whether it's designing intuitive user interfaces, solving complex coding challenges, or optimizing websites for better performance, I love every part of the process. Web development is constantly evolving, and that excites me, it pushes me to learn new technologies and stay up to date with trends, ensuring that I’m always improving and refining my craft. For me, it's not just about writing code; it’s about building solutions that make a difference, whether that’s through enhancing user experiences, improving accessibility, or creating efficient systems. My enthusiasm for web development fuels my drive to keep growing and creating, and I’m always eager to take on new projects and challenges that allow me to apply my skills in meaningful ways.</p>    
+        </div>
+    </section>
+
+    <section id="interests">
+        <div class="container3">
+            <h2 class="interests">Interests</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="interest1">
+                        <h2 class="int">Web Development</h2>
+                        <p class="int-2">I am passionate about web development because it allows me to create dynamic, interactive, and user-friendly applications. I enjoy designing and developing web solutions that are not only visually appealing but also efficient and scalable. My focus includes both front-end and back-end development, ensuring seamless user experiences and robust functionality. I am particularly interested in modern web frameworks, responsive design, and optimizing website performance for speed and security.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="interest2">
+                        <h2 class="int">Cyber Security</h2>
+                        <p class="int-2">Security is a fundamental aspect of any digital system, and I am dedicated to understanding and implementing best practices to protect applications and data. I am fascinated by ethical hacking, threat analysis, and security protocols that safeguard web applications and databases from cyber threats. My goal is to build secure systems by incorporating encryption, authentication, and vulnerability assessment techniques into my work.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="interest3">
+                        <h2 class="int">DBMs</h2>
+                        <p class="int-2">Data is at the core of every application, and I have a strong interest in designing, managing, and optimizing databases. I enjoy working with SQL and NoSQL databases, ensuring data integrity, security, and efficiency. My focus includes database design, query optimization, and implementing best practices for data storage and retrieval. I aim to create scalable database solutions that support high-performance applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container4">
+            <h2 class="skills">Programing Language</h2>
+            <div class="icons-container">
+                
+                <div class="icon-item">
+                    <i class="fab fa-html5"></i>
+                    HTML
+                </div>
+    
+                
+                <div class="icon-item">
+                    <i class="fab fa-css3-alt"></i>
+                    CSS
+                </div>
+
+                 
+               <div class="icon-item">
+                     <i class="fab fa-js-square"></i>
+                     JavaScript
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+         <div class="container5">
+            <h2 class="edu">Educational Background</h2>
+           <div class="edu-bgd" type="circle">
+            <p>WAEC O'Level</p>
+            <p>NABTEB O'Level</p>
+           </div>
+           <P class="gtc">Government Technical College Ikorodu,Lagos ,Nigeria.</P>
+         </div>
+
+        <!-- Download CV Section -->
+            <div class="download-cv">
+                <a href="OMEGAH CHIBUIKEM SAMUEL RESUME.pdf" download="OMEGAH CHIBUIKEM SAMUEL RESUME.pdf" class="btn-download">
+                    <i class="fab fa-download"></i> Download My CV
+                </a>
+            </div>
+    </section>
+
+    <section id="projects">
+        <div class="container6">
+            <h2 class="projects">Projects</h2>
+            <p class="p3">For this project, I cloned a modern website to showcase my skills in web development. I meticulously replicated the design, ensuring all elements from the navigation bar to the footer were accurately positioned, utilizing HTML and CSS.This project reflects not only my understanding of front-end development but also my attention to detail and ability to translate design into functional code. I'm excited to submit this clone as part of my portfolio, demonstrating my ability to create visually appealing and interactive websites.</p>
+            <button class="btn-1">
+                <a href="https://github.com/chiboy118/unilag.git">view project</a>
+            </button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container7">
+            <h2 class="contact">Contact Me</h2>
+            <form action="#">
+                <div class="formgroup" >
+                    <label for="name">Name:</label>
+                    <p><input type="text" placeholder="enter fullname" name="name" required></p>
+              </div>
+        
+              <div class="formgroup" >
+                          <label for="email">Email:</label>
+                          <p><input type="email" placeholder="enter your email" name="email" required></p>
+              </div>
+
+              <div class="formgroup">
+                <label for="message">Message:</label>
+                <p><textarea id="message" name="message" rows="4" placeholder="Your message here..." required></textarea></p>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
+        <h3 class="alt-1">Connect with me:</h3>
+        <div class="social-links">
+            <a href="mailto:chibuikeomegah@gmail.com" target="_blank" class="social-btn">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/+2349013772668" target="_blank" class="social-btn">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.tiktok.com/@forever.young509" target="_blank" class="social-btn">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.facebook.com/omegahchibuike" target="_blank" class="social-btn">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://t.me/chibuikeomegah" target="_blank" class="social-btn">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+        </div>
+    </section>
+    <footer> <p>&copy; 2025 Omegah Chibuikem. All rights reserved.</p></footer>
+</body>
+</html>
